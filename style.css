@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC:300');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spectral SC', serif;
+  font-style: normal;
+  font-weight: 100;
+  text-align: right;
+  color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+
+.side {
+  float: left;
+  background-color: white;
+  width: 30vw;
+  height: 100%;
+}
+
+header {
+  color: black;
+  padding: 1em;
+  padding-right: 5vw;
+  height: 15vh;
+  min-height: 80px;
+
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  min-height: 220px;
+  justify-content: center;
+}
+
+nav ul {
+  padding-right: 5vw;
+}
+
+nav ul li {
+}
+
+nav ul li a{
+  font-size: 120%;
+  display: inline-block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin: 0;
+  width: 100%;
+}
+
+nav ul li a:hover{
+  color: black;
+  border-right: solid darkturquoise;
+  padding-right: 1em;
+  border-width: 3px;
+}
+
+nav ul li a + .page {
+  position: fixed;
+  top: 0;
+  left: 30vw;
+  width: 70vw;
+  height: 100%;
+
+  display: none;
+}
+
+nav ul li a:hover + .page
+{
+  display: unset;
+  z-index: 1;
+}
+
+nav ul li a + #proj1
+{
+  background: url("img/sofa/beneath.jpg") no-repeat center;
+  background-size: cover;
+}
+
+nav ul li a + #proj2
+{
+  background: url("img/moma/moma.jpg") no-repeat center;
+  background-size: cover;
+}
+
+nav ul li a + #proj3
+{
+  background: url("img/avant/avant.jpg") no-repeat center;
+  background-size: cover;
+}
+
+nav ul li a + #proj4
+{
+  background: url("img/color/color1.jpg") no-repeat center;
+  background-size: cover;
+}
+
+nav ul li a + #page
+{
+  background: url("img/me.jpg") no-repeat center;
+  background-size: cover;
+}
+
+
+footer {
+  height: 10vh;
+  min-height: 30px;
+  position: relative;
+  padding: 1em;
+}
+
+footer a {
+  font-size: 80%;
+  color: black;
+  position: absolute;
+  bottom: 1em; 
+  right: 5vw;
+}
+
+footer h2 {
+  font-size: 80%;
+  color: darkgray;
+  position: absolute;
+  bottom: 2.5em; 
+  right: 5vw;
+}
+
+.pic{
+  float: left;
+  width: 70vw;
+  height: 100%;
+}
+
+.grid-pic{
+  width: 50%;
+  margin: 0;
+  height: 50%;
+  float: left;
+
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.grid-pic:hover{
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+#pic1{
+  background: url("img/shoe.jpg") no-repeat center;
+  background-size: cover;
+}
+#pic2{
+  background: url("img/bird.jpg") no-repeat center;
+  background-size: cover;
+}
+#pic3{
+  background: url("img/hand.jpg") no-repeat center;
+  background-size: cover;
+}
+#pic4{
+  background: url("img/grey.jpg") no-repeat center;
+  background-size: cover;
+}
+
+/**********/
+
+@media screen and (max-width: 610px) {
+  .side {
+    width: 100vw;
+    float: left;
+    text-align: center;
+  }
+
+  nav ul li a + .page {
+    position: relative;
+  }
+
+  nav ul li a:hover + .page
+  {
+    display: none;
+  }
+
+  a {
+    width: 100vw;
+  }
+
+  nav ul li a:hover{
+    color: black;
+    border-right: none;
+    padding-right: 0;
+    border-width: 0;
+  }
+
+  footer a, footer h2 {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+
+  .pic {
+    display: none;
+  }
+}
