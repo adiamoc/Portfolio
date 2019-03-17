@@ -12,48 +12,66 @@
 		<header id="myHeader">
 			<a href="index.html"><h1>Chen Ma</h1></a>
 			<h2>
-				<a href="proj3.html">&lt;Avant Garde</a> |
-				<a href="about.html">About Me&gt;</a>
+				<a href="index.html">&lt;Home&gt;</a>
 			</h2>
 		</header>
 		<section class="article">
-			<h2>Color Experiment</h2>
-
-			<div class="half-box">
-				<img src="img/color/color1.jpg" alt="color 1">
-				<img src="img/color/color2.jpg" alt="color 2">
-				<img src="img/color/color3.jpg" alt="color 3">
-				<img src="img/color/color4.jpg" alt="color 4">
-			</div>
+			<h2>Short Paper</h2>
 
 			<div class="write">
-				<p>
-					In this project, I did a drawing of a costume design; the idea originates from flower. "Natural", "Monochromatic", "Analogous" and "Complementary" are the four color schemes I used for this project.
-				</p>
+				<h3>Exploring the Role of Sound in Augmenting Visualization to Enhance User Engagement</h3>
 				<div class="big-box">
-					<img src="img/color/colors.png" alt="color schemes">
+					<img src="img/visual/vidi_sound.png" alt="App Panel" class="shadow">
 				</div>
 				<p>
-					Before I start to draw in Illustrator, I first worked on the paper sketch. Then I traced my work using the pen tool and the pencil tool in Illustrator. At first, I did not know anything about closed path, and the layers are completely messed up. After seeing the demonstration in class, I redo the tracing and it came out to be much better. This time I was able to group all the paths together to do the next step — filling the color. I used Adobe Color CC to pick the colors and used live paint bucket to fill them. I also learned how to use swatches to save my color scheme and how to set base color to get all the different tints and shades of it.
+					This paper is published at <a href="https://ieeexplore.ieee.org/document/8365996">IEEE Pacific Visualization Symposium</a> at Kobe, Japan.
 				</p>
+				<h4>Abstract</h4>
+				<p>
+					Studies on augmenting visualization with sound are typically based on the assumption that sound can be complementary and assist in data analysis tasks. While sound promotes a different sense of engagement than vision, we conjecture that by augmenting non-speech audio to a visualization can not only help enhance the users' perception of the data but also increase their engagement with the data exploration process. We have designed a preliminary user study to test users' performance and engagement while exploring in a data visualization system under two different settings: visual-only and audiovisual. For our study, we used basketball player movement data in a game and created an interactive visualization system with three linked views. We supplemented sound to the visualization to enhance the users' understanding of a team's offensive/defensive behavior. The results of our study suggest that we need to better understand the effect of sound choice and encoding before considering engagement. We also find that sound can be useful to draw novice users' attention to patterns or anomalies in the data. Finally, we propose follow-up studies with designs informed by the findings from this study.
+				</p>
+				<h4>Authors</h4>
+				<p>
+					Meng Du; Jia-Kai Chou; Chen Ma; Senthil Chandrasegaran; Kwan-Liu Ma;
+				</p>
+				<h4>My Process</h4>
+				<p>
+					I worked with Meng Du on the coding of the program. I was incharge of the redesign of the interface and the implementation of the new visualization. I also added new sound-visual coordinate system in the program. To better implement the program, I also changed the data structure and remake the data processing. With Jia-Kai Chou, we a lot about how to present the visualization, the connection between sound and visual, and revised many times on the project. Professor Kwan-Liu Ma also provided many useful suggestions on the visualization design and user experience design.
+				</p>
+			</div>
 
-				<div class="quarter-box">
-					<img src="img/color/org1.jpg" alt="orginial 1">
-					<img src="img/color/org2.jpg" alt="orginial 2">
-					<img src="img/color/org3.jpg" alt="orginial 3">
-					<img src="img/color/org4.jpg" alt="orginial 4">
+			<h2>Project</h2>
+			<div class="write">
+				<h3>Transportation System Visualization</h3>
+				<div class="big-box">
+					<img src="img/visual/transportation.jpg" alt="Transportation Visualization" class="shadow">
+				</div>
+				<h4>Dataset Introduction</h4>
+				<p>
+					The dataset contains the ground transportation lines in 267 cities around the world (44 available for further inspection). There are five .csv files available, named as cities, lines, stations, systems, and tracks. People may be curious about the history of metro system in their home city, and how is expanded over year. They may also want to explore the railway lines in other cities, compared to their home city. Also, given the current track information of a city, can the user predict the future rail transit system development? To realize these features from this dataset, we would like to visualize the transport system locations in the world, transportation comparison between any two cities, how lines have changed over time based on historical records, and the growing trend of transportation in each city. <a href="https://www.kaggle.com/citylines/city-lines/data">&lt;Dataset Source&gt;</a>
+				</p>
+				<h4>Initial visualization proposal</h4>
+				<div class="third-box">
+					<img src="img/visual/worldmap.jpg" alt="World Map">
+					<img src="img/visual/wordcloud.jpg" alt="Word Cloud">
+					<img src="img/visual/citymap.jpg" alt="City Map">
 				</div>
 				<p>
-					Through the critique and the feedback from my classmates and teachers, I realized that there're many things I could do to improve my work. I added faces to all of them. I also resized the square in the background and cut off some parts of the right foot to make the figure look like flying out. Besides, I made some changes to the color in different parts of the illustration and recolored the analogous.
-
+					Our system is based on the city lines dataset. To show the difference in system sizes, the visualization will start with a word cloud of the city names. The size of the word is determined by the length of the city lines in the city. There will be a button below the word cloud. By clicking the button, the user can switch into a world map which indicates the cities with relevant data. In order to view each city, the user can click on the word of city name. Each city will has its own map. The city map will be based on map API. There will be a scroll bar so that the user can view the change of city lines based on time to get an overview. The scroll bar is very important as it is a user-friendly way for the user to compare city lines of different years. This system can efficiently compare data of city lines from different cities through the size of word cloud or the color of world map, filter over the individual city's development of lines based on user's input of time and view the track of each line individually. 
+				</p>
+				<h4>Final Visualization System Overview</h4>
+				<p>
+					The system connects three graphs and enables graphs to interact with each other. The first graph can show an overview of city lines geographically. After clicking specific countries in the first graph, data can be narrowed down and showed in the second graph. After comparing total city lines' length, the user can compare and see more data details in the third graph by choosing two cities in the second graph. The added line graph enables the user to explore two more data attributes: station and time change. Also, for the whole system, we used the same color in graph 1 and graph 2 to identify cities unselected and cities selected. We believe that the same color will help the user to see relationships between two graphs more easily. For my part, I partnered with one other team member and finished the "City Lines Graph and Line Graph".
+				</p>
+				<p>
+					Both graphs show detailed information about two cities that the user chose. Meanwhile, they compare city lines and stations of both cities. The Channels we used is the color. Different color represents different city line for the first graph. We used legends to label them. For the line chart, we used two colors to represent two cities. We also made graph interactions between two graphs. When the user moves the timeline button to the left, it means the year increases. The API graph will update city lines and stations concurrently for the year chosen. The yellow points in the line chart specify two points for the specific year selected. In this way, the user can discover how city lines and stations change over time. Also, we have the 'show station' checkbox for the user to choose whether stations will be shown in the city lines graph.
 				</p>
 			</div>
 			
 			<footer>
 				<h3>chema@ucdavis.edu</h3>
-					<a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
 			</footer>
 		</section>
-		<script src="scroll.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
