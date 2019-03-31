@@ -260,10 +260,14 @@ footer h2 {
   }
   h1 {
     position: absolute;
-    bottom: 1em;
+    bottom: 3em;
     left: .5em;
     background-color: white;
     padding: .5em;
+  }
+  #mainnav {
+    height: 10em;
+    line-height: 10em;
   }
   #mainnav a {
     font-size: 0.8em;
