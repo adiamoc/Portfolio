@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Chen Ma's Portfolio</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="project.css">
+	</head>
+
+	<body>
+		<header id="myHeader">
+			<a href="index.html"><h1>Chen Ma</h1></a>
+			<h2>
+				<a href="index.html#projects">&lt;Back&gt;</a>
+			</h2>
+		</header>
+		<section class="article">
+			
+			<h2>Visualization</h2>
+			<div class="write">
+				<h3>Transportation System Visualization</h3>
+				<div class="big-box">
+					<img src="img/visual/transportation.jpg" alt="Transportation Visualization" class="shadow">
+				</div>
+				<h4>Dataset Introduction</h4>
+				<p>
+					The dataset contains the ground transportation lines in 267 cities around the world (44 available for further inspection). There are five .csv files available, named as cities, lines, stations, systems, and tracks. People may be curious about the history of metro system in their home city, and how is expanded over year. They may also want to explore the railway lines in other cities, compared to their home city. Also, given the current track information of a city, can the user predict the future rail transit system development? To realize these features from this dataset, we would like to visualize the transport system locations in the world, transportation comparison between any two cities, how lines have changed over time based on historical records, and the growing trend of transportation in each city. <a href="https://www.kaggle.com/citylines/city-lines/data">&lt;Dataset Source&gt;</a>
+				</p>
+				<h4>Initial visualization proposal</h4>
+				<div class="third-box">
+					<img src="img/visual/worldmap.jpg" alt="World Map">
+					<img src="img/visual/wordcloud.jpg" alt="Word Cloud">
+					<img src="img/visual/citymap.jpg" alt="City Map">
+				</div>
+				<p>
+					Our system is based on the city lines dataset. To show the difference in system sizes, the visualization will start with a word cloud of the city names. The size of the word is determined by the length of the city lines in the city. There will be a button below the word cloud. By clicking the button, the user can switch into a world map which indicates the cities with relevant data. In order to view each city, the user can click on the word of city name. Each city will has its own map. The city map will be based on map API. There will be a scroll bar so that the user can view the change of city lines based on time to get an overview. The scroll bar is very important as it is a user-friendly way for the user to compare city lines of different years. This system can efficiently compare data of city lines from different cities through the size of word cloud or the color of world map, filter over the individual city's development of lines based on user's input of time and view the track of each line individually. 
+				</p>
+				<h4>Final Visualization System Overview</h4>
+				<p>
+					The system connects three graphs and enables graphs to interact with each other. The first graph can show an overview of city lines geographically. After clicking specific countries in the first graph, data can be narrowed down and showed in the second graph. After comparing total city lines' length, the user can compare and see more data details in the third graph by choosing two cities in the second graph. The added line graph enables the user to explore two more data attributes: station and time change. Also, for the whole system, we used the same color in graph 1 and graph 2 to identify cities unselected and cities selected. We believe that the same color will help the user to see relationships between two graphs more easily. For my part, I partnered with one other team member and finished the "City Lines Graph and Line Graph".
+				</p>
+				<p>
+					Both graphs show detailed information about two cities that the user chose. Meanwhile, they compare city lines and stations of both cities. The Channels we used is the color. Different color represents different city line for the first graph. We used legends to label them. For the line chart, we used two colors to represent two cities. We also made graph interactions between two graphs. When the user moves the timeline button to the left, it means the year increases. The API graph will update city lines and stations concurrently for the year chosen. The yellow points in the line chart specify two points for the specific year selected. In this way, the user can discover how city lines and stations change over time. Also, we have the 'show station' checkbox for the user to choose whether stations will be shown in the city lines graph.
+				</p>
+			</div>
+			
+			<footer>
+				<h3>chema@ucdavis.edu</h3>
+			</footer>
+		</section>
+		<script src="script.js"></script>
+	</body>
+</html>

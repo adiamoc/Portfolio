@@ -5,55 +5,72 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Chen Ma's Portfolio</title>
 		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	</head>
 
 	<body>
-		<div class="side">
+		<section id="main" class="page">
+			<div id="myphoto"></div>
+			<section id="info">
+				<h1>Hi, my name is <br> <span style="color: darkturquoise">Chen Ma.</span></h1>
+				<p>I'm now a senior student, majoring in Computer Science and Design. Being a double major student is quite challenging and tiring, but I really enjoy both majors and I treat them with equal love and enthusiasm. I've learnt a lot during my study here and is excited about what I could learn and achieve in the future.</p>
+			</section>
+			<nav id="mainnav">
+			 	<a href="resume.pdf">Resume</a>
+			 	<a href="#projects">Recent Projects
+			 		<span class="next"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+			 	</a>
+				<a href="https://github.com/adiamoc">GitHub</a>
+			</nav>
+		</section>
 
-			<a href="about.html">
-				<header>
-					<h1>Chen Ma</h1>
-					<h2>Designer / Coder</h2>
-				</header>
+		<section id="projects">
+			<a href="beneath.html" id="p1" class="project">
+				<div id="p1_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>BENEATH</h2>
+				</div>
 			</a>
+			<a href="lighthouse.html" id="p2" class="project">
+				<div id="p2_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>Lighthouse</h2>
+				</div>
+			</a>
+			<a href="visual.html" id="p3" class="project">
+				<div id="p3_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>Visualization</h2>
+				</div>
+			</a>
+			<a href="sonification.html" id="p4" class="project">
+				<div id="p4_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>Sonification</h2>
+				</div>
+			</a>
+			<a href="pixir.html" id="p5" class="project">
+				<div id="p5_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>Pixir</h2>
+				</div>
+			</a>
+			<a href="poster.html" id="p6" class="project">
+				<div id="p6_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>Poster Design</h2>
+				</div>
+			</a>
+			<a href="book.html" id="p7" class="project">
+				<div id="p7_pic" class="proj_pic"></div>
+				<div class="proj_name">
+					<h2>Book Design</h2>
+				</div>
+			</a>
+		</section>
 
-			<div class="nav-bar">
-				<nav>
-					<ul>
-						<li class="nav-item">
-							<a href="proj1.html">Interactive Media</a>
-							<div class="page" id="proj1"></div>
-						</li>
-						<li class="nav-item">
-							<a href="proj2.html">Graphic Design</a>
-							<div class="page" id="proj2"></div>
-						</li>
-						<li class="nav-item">
-							<a href="proj3.html">HCI Study Project</a>
-							<div class="page" id="proj3"></div>
-						</li>
-						<li class="nav-item">
-							<a href="proj4.html">Data Visualization</a>
-							<div class="page" id="proj4"></div>
-						</li>
-						<li class="nav-item">
-							<a href="about.html">About me</a>
-							<div class="page" id="page"></div>
-						</li>
-					</ul>
-				</nav>
-			</div>
-
-
-			<footer>
-				<h2>chema@ucdavis.edu</h2>
-			</footer>
-
-		</div>
-
-		<div class="pic">
-		</div>
-
+		<script src="script.js"></script>
 	</body>
 </html>
